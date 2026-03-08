@@ -1,0 +1,62 @@
+[
+    {
+        "name": "Gautam",
+        "steps": 5,
+        "time": 6,
+        "difficulty": "medium"
+    },
+    {
+        "name": "Sandeep",
+        "steps": 9,
+        "time": 6,
+        "difficulty": "medium"
+    },
+    {
+        "name": "Krishna",
+        "steps": 10,
+        "time": 8,
+        "difficulty": "easy"
+    },
+    {
+        "name": "Krishna",
+        "steps": 19,
+        "time": 21,
+        "difficulty": "easy"
+    },
+    {
+        "name": "null",
+        "steps": 20,
+        "time": 21,
+        "difficulty": "easy"
+    },
+    {
+        "name": "null",
+        "steps": 20,
+        "time": 42,
+        "difficulty": "expert"
+    },
+    {
+        "name": "null",
+        "steps": 20,
+        "time": 63,
+        "difficulty": "hard"
+    },
+    {
+        "name": "Krishna",
+        "steps": 24,
+        "time": 33,
+        "difficulty": "expert"
+    },
+    {
+        "name": "null",
+        "steps": 25,
+        "time": 28,
+        "difficulty": "medium"
+    },
+    {
+        "name": "null",
+        "steps": 25,
+        "time": 28,
+        "difficulty": "medium"
+    }
+]

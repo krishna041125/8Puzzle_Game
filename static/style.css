@@ -1,0 +1,418 @@
+/* =========================
+GLOBAL STYLE
+========================= */
+
+body{
+
+font-family:Segoe UI, Arial, sans-serif;
+
+background:linear-gradient(135deg,#0f2027,#203a43,#2c5364);
+
+color:white;
+
+text-align:center;
+
+margin:0;
+
+padding:0;
+
+}
+
+
+
+/* =========================
+SCREEN LAYOUT
+========================= */
+
+.screen{
+
+margin-top:40px;
+
+padding:20px;
+
+}
+
+.hidden{
+
+display:none;
+
+}
+
+
+
+/* =========================
+TITLE
+========================= */
+
+.title{
+
+font-size:48px;
+
+margin-bottom:10px;
+
+}
+
+.subtitle{
+
+font-size:18px;
+
+margin-bottom:25px;
+
+opacity:0.9;
+
+}
+
+
+
+/* =========================
+INSTRUCTIONS
+========================= */
+
+.instructions{
+
+background:rgba(255,255,255,0.08);
+
+padding:15px;
+
+border-radius:10px;
+
+width:320px;
+
+margin:20px auto;
+
+text-align:left;
+
+}
+
+.instructions ul{
+
+margin-top:10px;
+
+}
+
+
+
+/* =========================
+DIFFICULTY BUTTONS
+========================= */
+
+.level{
+
+display:block;
+
+width:220px;
+
+margin:12px auto;
+
+padding:15px;
+
+font-size:18px;
+
+border:none;
+
+border-radius:12px;
+
+cursor:pointer;
+
+color:white;
+
+transition:0.25s;
+
+}
+
+.level:hover{
+
+transform:scale(1.05);
+
+}
+
+.easy{background:#27ae60;}
+
+.medium{background:#f39c12;}
+
+.hard{background:#e74c3c;}
+
+.expert{background:#8e44ad;}
+
+
+
+/* =========================
+STATS PANEL
+========================= */
+
+.stats{
+
+display:flex;
+
+justify-content:center;
+
+gap:30px;
+
+margin:15px;
+
+font-size:18px;
+
+}
+
+
+
+/* =========================
+PUZZLE BOARD
+========================= */
+
+#board{
+
+display:grid;
+
+grid-template-columns:repeat(3,1fr);
+
+gap:10px;
+
+width:320px;
+
+margin:25px auto;
+
+padding:10px;
+
+border-radius:15px;
+
+background:rgba(255,255,255,0.05);
+
+box-shadow:0 10px 30px rgba(0,0,0,0.4);
+
+}
+
+
+
+/* =========================
+TILES
+========================= */
+
+.tile{
+
+background:#3498db;
+
+height:95px;
+
+display:flex;
+
+justify-content:center;
+
+align-items:center;
+
+font-size:30px;
+
+border-radius:12px;
+
+cursor:pointer;
+
+transition:all 0.2s ease;
+
+}
+
+.tile:hover{
+
+transform:scale(1.05);
+
+}
+
+.empty{
+
+background:#1e2a38;
+
+cursor:default;
+
+}
+
+
+
+/* MOVABLE TILE HIGHLIGHT */
+
+.movable{
+
+background:#2ecc71;
+
+}
+
+
+
+/* =========================
+GAME BUTTONS
+========================= */
+
+.buttons{
+
+margin-top:10px;
+
+}
+
+button{
+
+padding:10px 15px;
+
+margin:6px;
+
+border:none;
+
+border-radius:8px;
+
+cursor:pointer;
+
+font-size:15px;
+
+background:#34495e;
+
+color:white;
+
+transition:0.2s;
+
+}
+
+button:hover{
+
+background:#3d5a73;
+
+transform:scale(1.05);
+
+}
+
+
+
+/* =========================
+WIN CARD
+========================= */
+
+.card{
+
+background:white;
+
+color:black;
+
+padding:20px;
+
+width:260px;
+
+margin:20px auto;
+
+border-radius:12px;
+
+box-shadow:0 8px 25px rgba(0,0,0,0.4);
+
+}
+
+
+
+/* =========================
+BEST PLAYER CARD
+========================= */
+
+#bestCard{
+
+background:gold;
+
+padding:15px;
+
+margin:20px auto;
+
+border-radius:12px;
+
+color:black;
+
+font-weight:bold;
+
+width:260px;
+
+box-shadow:0 6px 20px rgba(0,0,0,0.3);
+
+}
+
+
+
+/* =========================
+LEADERBOARD
+========================= */
+
+.leaderboardContainer{
+
+margin-top:30px;
+
+}
+
+table{
+
+margin:auto;
+
+border-collapse:collapse;
+
+background:rgba(255,255,255,0.05);
+
+border-radius:10px;
+
+overflow:hidden;
+
+}
+
+th,td{
+
+padding:10px 18px;
+
+}
+
+th{
+
+background:#1abc9c;
+
+}
+
+tr:nth-child(even){
+
+background:rgba(255,255,255,0.06);
+
+}
+
+
+
+/* =========================
+FOOTER
+========================= */
+
+.footer{
+
+margin-top:40px;
+
+font-size:14px;
+
+opacity:0.7;
+
+}
+
+
+
+/* =========================
+MOBILE RESPONSIVE
+========================= */
+
+@media (max-width:500px){
+
+#board{
+
+width:260px;
+
+}
+
+.tile{
+
+height:75px;
+
+font-size:24px;
+
+}
+
+.level{
+
+width:180px;
+
+}
+
+}
+
