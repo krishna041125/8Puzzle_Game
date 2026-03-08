@@ -1,86 +1,87 @@
 <!DOCTYPE html>
 <html>
-<head>
-<title>8 Puzzle Pro</title>
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<link rel="stylesheet" href="/static/style.css">
-</head>
+    <head>
+        <title>8 Puzzle Pro</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="/static/style.css">
+    </head>
 
-<body>
+    <body>
 
-  <div id="homeScreen" class="screen">
-    <h1 class="title">🧩 8 Puzzle Pro</h1>
-      <p class="subtitle">Arrange the numbers from 1 to 8 by sliding tiles.</p>
-        <div class="instructions">
-          <p>How to Play:</p>
-            <ul>
-              <li>Click a tile next to the empty space to move it</li>
-              <li>Arrange tiles in order: 1 → 8</li>
-              <li>Use Undo if you make a mistake</li>
-              <li>Try to solve in minimum steps!</li>
-            </ul>
+        <div id="homeScreen" class="screen">
+            <h1 class="title">🧩 8 Puzzle Pro</h1>
+            <p class="subtitle">Arrange the numbers from 1 to 8 by sliding tiles.</p>
+            <div class="instructions">
+                <p><b>How to Play:</b></p>
+                <ul>
+                    <li>Click a tile next to the empty space to move it</li>
+                    <li>Arrange numbers from 1 → 8</li>
+                    <li>Try to solve in minimum steps</li>
+                    <li>You can use Undo or Restart</li>
+                </ul>
+            </div>
+
+            <h3>Select Difficulty</h3>
+            <button onclick="startGame('easy')" class="level easy">Easy</button>
+            <button onclick="startGame('medium')" class="level medium">Medium</button>
+            <button onclick="startGame('hard')" class="level hard">Hard</button>
+            <button onclick="startGame('expert')" class="level expert">Expert</button>
         </div>
-      
-    <h3>Select Difficulty</h3>
-      <button onclick="startGame('easy')" class="level easy"> Easy </button>
-      <button onclick="startGame('medium')" class="level medium"> Medium </button>
-      <button onclick="startGame('hard')" class="level hard"> Hard </button>
-      <button onclick="startGame('expert')" class="level expert"> Expert </button>
-  </div>
+
+        <div id="gameScreen" class="screen hidden">
+        <h1>8 Puzzle</h1>
+
+        <div id="gameArea">
+            <div class="stats">
+                <div>Steps: <span id="steps">0</span></div>
+                <div>Time: <span id="time">0</span></div>
+                <div>MD: <span id="md">0</span></div>
+            </div>
+            <div id="board"></div>
+            <div class="buttons">
+                <button onclick="undo()">Undo</button>
+                <button onclick="restart()">Restart</button>
+                <button onclick="shuffle(currentDifficulty)">Shuffle</button>
+                <button onclick="autoSolve()">Auto Solve</button>
+                <button onclick="goHome()">Home</button>
+            </div>
+        </div>
 
 
-  <div id="gameScreen" class="screen hidden">
-    <h1>8 Puzzle</h1>
-      <div class="stats">
-        <div>Steps: <span id="steps">0</span></div>
-        <div>Time: <span id="time">0</span></div>
-        <div>MD: <span id="md">0</span></div>
-      </div>
+        <div id="resultArea">
+            <div id="card" class="card hidden">
+                <h2>🎉 Congratulations</h2>
+                <p id="finalSteps"></p>
+                <p id="finalTime"></p>
+                <p>You solved the puzzle!</p>
+            </div>
 
-    
-    <div id="board"></div>
-    <div class="buttons">
-      <button onclick="undo()">Undo</button>
-      <button onclick="restart()">Restart</button>
-      <button onclick="shuffle(currentDifficulty)">Shuffle</button>
-      <button onclick="autoSolve()">Auto Solve</button>
-      <button onclick="goHome()">Home</button>
-    </div>
+            <div id="bestCard" class="hidden">
+                <h2>🏆 Best Player</h2>
+                <p id="bestName"></p>
+                <p id="bestSteps"></p>
+                <p id="bestTime"></p>
+                <p id="bestLevel"></p>
+            </div>
 
+            <div class="leaderboardContainer hidden">
 
-    <div id="card" class="card hidden">
-      <h2>🎉 Congratulations</h2>
-      <p id="finalSteps"></p>
-      <p id="finalTime"></p>
-      <p>You solved the puzzle!</p>
-    </div>
-    
-    <div id="bestCard" class="hidden">
-      <h2>🏆 Best Player</h2>
-      <p id="bestName"></p>
-      <p id="bestSteps"></p>
-      <p id="bestTime"></p>
-      <p id="bestLevel"></p>
-    </div>
+                <h2>Leaderboard</h2>
+                <table id="leaderboard">
+                    <tr>
+                        <th>Rank</th>
+                        <th>Name</th>
+                        <th>Steps</th>
+                        <th>Time</th>
+                        <th>Level</th>
+                    </tr>
+                </table>
+            </div>
+        </div>
 
+        <audio id="winSound" src="/static/win.mp3"></audio>
 
-    <div class="leaderboardContainer">
-      <h2>Leaderboard</h2>
-      <table id="leaderboard">
-        <tr>
-          <th>Rank</th>
-          <th>Name</th>
-          <th>Steps</th>
-          <th>Time</th>
-          <th>Level</th>
-        </tr>
-      </table>
-    </div>
+        <script src="/static/script.js"></script>
 
-    <audio id="winSound" src="/static/win.mp3"></audio>
-
-    <script src="/static/script.js"></script>
-</body>
+    </body>
 </html>
-
-
